@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Service
 public  class CalculatorServiceImpl implements HelloService {
     private int sum;
+    private int min;
     private int sum1;
     private int sum2;
     public String helloCalc() {
@@ -17,4 +18,8 @@ public  class CalculatorServiceImpl implements HelloService {
         return sum;
     }
 
+    public int min(int sum1, int sum2) {
+        min=sum1-sum2;
+        return min;
+    }
 }
