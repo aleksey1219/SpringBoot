@@ -34,13 +34,15 @@ public class HelloCalculator {
         }
         return num1 + "-" + num2 + "=" + helloService.min(num1, num2);
     }
+
     @GetMapping(path = "/multiply")
     public String multiply(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
             return "Не введен один из оргументов";
         }
-        return num1 + "*" + num2 + "=" +helloService.multiply(num1, num2);
+        return num1 + "*" + num2 + "=" + helloService.multiply(num1, num2);
     }
+
     @GetMapping(path = "/divide")
     public String divide(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
